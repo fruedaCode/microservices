@@ -1,0 +1,15 @@
+server:
+  port: 8761
+
+eureka:
+  instance:
+    hostname: localhost
+    leaseRenewalInternalInSeconds: 5 #heartbeat, 3 ok hasta visible
+  client:
+    registerWithEureka: false #él mismo es el servidor, evita onanismos
+    fetchRegistry: false
+    server:
+      waitTimeInMsWhenSyncEmpty: 0
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+
