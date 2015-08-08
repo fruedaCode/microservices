@@ -12,7 +12,7 @@ eureka:
 
 zuul:
   routes:
-  	  tiendaAngular : /staticServer
+      tiendaAngular : /staticServer
       stockservice: /productos/{id}/stock
       catalogoservice: /catalogo/**
       productosservice : /productos
