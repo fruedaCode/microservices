@@ -14,5 +14,5 @@ zuul:
   routes:
       stockservice: /productos/{id}/stock
       catalogoservice: /catalogo/**
-      productosservice : /productos/{id}
+      productosservice : /productos
         

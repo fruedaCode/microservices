@@ -16,10 +16,23 @@ public class CatalogoApplication {
 
     @RequestMapping(value = "/catalogo/referencias/{referencia}", method = RequestMethod.GET)
     public FichaProducto obtenerStockProducto(@PathVariable String referencia) {
-        FichaProducto ficha = new FichaProducto(referencia, "Camiseta toha guapa",
-                "hombre", "negro",
-                "http://www.vivefiestas.com/blog/wp-content/uploads/2015/05/camiseta-orgullo-friki-2008.png",
-                new BigDecimal("100"));
+    	FichaProducto ficha = null;
+    	if("12".equals(referencia)){
+	        ficha = new FichaProducto(referencia, "Camiseta toha guapa",
+	                "hombre", "negro",
+	                "camiseta.png",
+	                new BigDecimal("100"));
+    	}else if("15".equals(referencia)){
+	        ficha = new FichaProducto(referencia, "Pantalon toha guapa",
+	                "hombre", "negro",
+	                "pantalon.png",
+	                new BigDecimal("100"));
+    	}else{
+	        ficha = new FichaProducto(referencia, "Camiseta toha guapa",
+	                "hombre", "negro",
+	                "http://www.vivefiestas.com/blog/wp-content/uploads/2015/05/camiseta-orgullo-friki-2008.png",
+	                new BigDecimal("100"));
+    	}
         return ficha;
     }
 

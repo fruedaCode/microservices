@@ -1,18 +1,10 @@
 server:
-  port: 8000
+  port: 0
 
 eureka:
   instance:
       metadataMap:
           instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
   client:
-      enabled: true
       serviceUrl:
           defaultZone: http://127.0.0.1:8761/eureka/
-
-zuul:
-  routes:
-      stockservice: /productos/{id}/stock
-      catalogoservice: /catalogo/**
-      productosservice : /productos
-        
