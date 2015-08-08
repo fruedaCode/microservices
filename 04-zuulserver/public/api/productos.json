@@ -1,0 +1,11 @@
+[{
+	"productoId": 1,
+	"nombreProducto" : "Camiseta",
+	"precioProducto" : "50",
+	"imagen" : "camiseta.png"
+},{
+	"productoId" : 2,
+	"nombreProducto" : "pantalon",
+	"precioProducto" : "40",
+	"imagen" : "pantalon.png"
+}]
