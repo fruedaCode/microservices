@@ -1,0 +1,10 @@
+server:
+  port: 7979
+
+eureka:
+  instance:
+      metadataMap:
+          instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+  client:
+      serviceUrl:
+          defaultZone: http://127.0.0.1:8761/eureka/

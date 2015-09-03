@@ -1,0 +1,17 @@
+server:
+  port: 8989
+
+management:
+  port: 8990
+  
+app:
+  rabbitmq:
+    host: localhost
+
+eureka:
+  instance:
+      metadataMap:
+          instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+  client:
+      serviceUrl:
+          defaultZone: http://127.0.0.1:8761/eureka/
