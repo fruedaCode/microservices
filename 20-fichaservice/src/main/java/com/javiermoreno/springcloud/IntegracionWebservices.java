@@ -9,14 +9,15 @@ import java.io.IOException;
 import java.util.concurrent.Future;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.scheduling.annotation.Async;
-import org.springframework.scheduling.annotation.AsyncResult;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+import com.netflix.hystrix.contrib.javanica.command.AsyncResult;
+
+
 
 /**
  *
@@ -35,30 +36,61 @@ public class IntegracionWebservices {
     }
    
 
-    @Async
-    @HystrixCommand(fallbackMethod = "defaultStock")
-    public Future<Integer> obtenerStockAsync(String referencia) throws IOException {
-        // Atiende qué bonito: indicas el nombre del servicio y restTemplate es capaz de recuperar su @
-        String stockURL = "http://stockservice/productos/" + referencia + "/stock";
-        String stockResponseBody = restTemplate.getForObject(stockURL, String.class);
-        JsonNode stockJson = objectMapper.readTree(stockResponseBody);
-        int unidadesDisponibles = stockJson.get("unidadesDisponibles").asInt();
-        return new AsyncResult<>(unidadesDisponibles);
-    }
-
-
-    @Async
-    @HystrixCommand(fallbackMethod = "defaultFicha")
-    public Future<Producto> obtenerFichaCatalogoAsync(String referencia) {
-        String catalogoURL = "http://catalogoservice/catalogo/referencias/" + referencia;
-        Producto producto = restTemplate.getForObject(catalogoURL, Producto.class);
-        return new AsyncResult<>(producto);
-    }
+//    @HystrixCommand
+//    public Future<Integer> obtenerStockAsync(String referencia) throws IOException {
+//        // Atiende qué bonito: indicas el nombre del servicio y restTemplate es capaz de recuperar su @
+//        String stockURL = "http://stockservice/productos/" + referencia + "/stock";
+//        String stockResponseBody = restTemplate.getForObject(stockURL, String.class);
+//        JsonNode stockJson = objectMapper.readTree(stockResponseBody);
+//        int unidadesDisponibles = stockJson.get("unidadesDisponibles").asInt();
+//        return new AsyncResult<>(unidadesDisponibles);
+//    }
     
-    public Future<Producto> defaultFicha(String referencia) {
-    	 return new AsyncResult<>(new Producto());
+    @HystrixCommand
+    public Future<Integer> obtenerStockAsync(final String referencia) {
+        return new AsyncResult<Integer>() {
+            @Override
+            public Integer invoke(){
+              String stockURL = "http://stockservice/productos/" + referencia + "/stock";
+              String stockResponseBody = restTemplate.getForObject(stockURL, String.class);
+              JsonNode stockJson = null;
+              Integer result = 0;
+			try {
+				stockJson = objectMapper.readTree(stockResponseBody);
+				result = stockJson.get("unidadesDisponibles").asInt();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+            	return result;
+            }
+        };
     }
-    public Future<Integer> defaultStock(String referencia) {
-    	 return new AsyncResult<>(0);
+
+    
+    @HystrixCommand
+    public Future<Producto> obtenerFichaCatalogoAsync(final String referencia) {
+        return new AsyncResult<Producto>() {
+            @Override
+            public Producto invoke() {
+                String catalogoURL = "http://catalogoservice/catalogo/referencias/" + referencia;
+                Producto producto = restTemplate.getForObject(catalogoURL, Producto.class);
+                return producto;
+            }
+        };
     }
+
+//    @HystrixCommand
+//    public Future<Producto> obtenerFichaCatalogoAsync(String referencia) {
+//        String catalogoURL = "http://catalogoservice/catalogo/referencias/" + referencia;
+//        Producto producto = restTemplate.getForObject(catalogoURL, Producto.class);
+//        return new AsyncResult<>(producto);
+//    }
+    
+//    public Future<Producto> defaultFicha(String referencia) {
+//    	 return new AsyncResult<>(new Producto());
+//    }
+//    public Future<Integer> defaultStock(String referencia) {
+//    	 return new AsyncResult<>(0);
+//    }
 }
