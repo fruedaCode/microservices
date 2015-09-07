@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
+<<<<<<< HEAD
 	<name>TurbineServer</name>
+=======
+	<name>turbine</name>
+>>>>>>> 1e2be45abc33ffc9a3ed02557dbf2da3a04a3bc7
 	<comment></comment>
 	<projects>
 	</projects>

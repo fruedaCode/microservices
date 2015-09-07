@@ -19,6 +19,7 @@ import com.netflix.hystrix.contrib.javanica.command.AsyncResult;
 
 
 
+
 /**
  *
  * @author ciberado
@@ -93,4 +94,5 @@ public class IntegracionWebservices {
 //    public Future<Integer> defaultStock(String referencia) {
 //    	 return new AsyncResult<>(0);
 //    }
+
 }
