@@ -26,7 +26,7 @@ public class ProductoCtrl {
     }
     
     
-    @RequestMapping(value="/productos", method=RequestMethod.GET)
+    @RequestMapping(value="/getProductosComposite", method=RequestMethod.GET)
     public List<Producto> obtenerProductos() 
     		throws IOException, InterruptedException, ExecutionException {
     	List<Producto> listaProductos = new ArrayList<Producto>();
@@ -35,7 +35,7 @@ public class ProductoCtrl {
         return listaProductos;
     }
     
-    @RequestMapping(value="/productos/{referencia}", method=RequestMethod.GET)
+    @RequestMapping(value="/getProductosComposite/{referencia}", method=RequestMethod.GET)
     public Producto obtenerProductoParalelo(@PathVariable String referencia) 
     throws IOException, InterruptedException, ExecutionException {
         return service.obtenerProducto(referencia);
