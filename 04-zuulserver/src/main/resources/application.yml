@@ -14,8 +14,7 @@ zuul:
   routes:
       stockservice: /productos/{id}/stock
       catalogoservice: /catalogo/**
-      productosservice : /productos
-      productoscomposite: /getProductosComposite
+      productosservice : /getProductosComposite
 
 spring:
   oauth2:
