@@ -34,7 +34,7 @@ public class IntegracionWebservices {
 
     @HystrixCommand
     public List<Producto> obtenerProductos() {
-        String productosURL = "http://productoscomposite/getProductosComposite";
+        String productosURL = "http://productosservice/getProductosComposite";
         Producto[] productos = restTemplate.getForObject(productosURL, Producto[].class);
         return Arrays.asList(productos);
 
