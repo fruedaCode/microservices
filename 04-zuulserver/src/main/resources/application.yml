@@ -15,9 +15,4 @@ zuul:
       stockservice: /productos/{id}/stock
       catalogoservice: /catalogo/**
       productosservice : /getProductosComposite
-
-spring:
-  oauth2:
-    resource:
-      userInfoUri: http://localhost:9999/uaa/user
         

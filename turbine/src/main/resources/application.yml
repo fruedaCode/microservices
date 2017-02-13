@@ -7,11 +7,11 @@ management:
 
 turbine:
   clusterNameExpression: "'default'"
-  appConfig: PRODUCTOSSERVICE
+  appConfig: PRODUCTOSSERVICE,ZUULPROXY
   combineHostPort: true
 
 eureka:
-  instance: 
+  instance:
       metadataMap:
           instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
   client:
