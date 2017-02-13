@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/authserver/authserver.iml" filepath="$PROJECT_DIR$/authserver/authserver.iml" />
+      <module fileurl="file://$PROJECT_DIR$/11-CatalogoService/catalogoservice.iml" filepath="$PROJECT_DIR$/11-CatalogoService/catalogoservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/03-eurekaregistry/eurekaRegistry.iml" filepath="$PROJECT_DIR$/03-eurekaregistry/eurekaRegistry.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/microservices.iml" filepath="$PROJECT_DIR$/.idea/microservices.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hystrixDashboard/monitorDashboard.iml" filepath="$PROJECT_DIR$/hystrixDashboard/monitorDashboard.iml" />
+      <module fileurl="file://$PROJECT_DIR$/turbine/monitorDashboard (1).iml" filepath="$PROJECT_DIR$/turbine/monitorDashboard (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/02-configserver/parent.iml" filepath="$PROJECT_DIR$/02-configserver/parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/productapi/productapi.iml" filepath="$PROJECT_DIR$/productapi/productapi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/20-fichaservice/productoservice.iml" filepath="$PROJECT_DIR$/20-fichaservice/productoservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/10-stockservice/stockservice.iml" filepath="$PROJECT_DIR$/10-stockservice/stockservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/04-zuulserver/zuulserver.iml" filepath="$PROJECT_DIR$/04-zuulserver/zuulserver.iml" />
+    </modules>
+  </component>
+</project>
