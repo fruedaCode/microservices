@@ -1,4 +1,4 @@
-package com.fruedacode.microservices.zuulserver;
+package com.fruedacode.microservices.hystrixdashboard;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;

@@ -1,2 +1,2 @@
-com\javiermoreno\springcloud\StockApplication.class
-com\javiermoreno\springcloud\StockProducto.class
+com\fruedacode\microservices\stockservice\StockProducto.class
+com\fruedacode\microservices\stockservice\StockApplication.class

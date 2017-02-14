@@ -1,4 +1,4 @@
-package com.fruedacode.microservices.zuulserver;
+package com.fruedacode.microservices.stockservice;
 
 import java.util.Objects;
 

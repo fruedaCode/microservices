@@ -46,13 +46,11 @@
         <module>02-configserver</module>
         <module>03-eurekaregistry</module>
         <module>04-zuulserver</module>
-        <module>authserver</module>
         <module>10-stockservice</module>
         <module>11-CatalogoService</module>
-        <module>20-fichaservice</module>
-         <!--<module>hystrixDashboard</module>
-         <module>productapi</module>
-         <module>turbine</module>-->
+        <module>20-productosservice</module>
+        <module>hystrixDashboard</module>
+        <module>turbine</module>
     </modules>
 
 

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.fruedacode.microservices.fichaservice;
+package com.fruedacode.microservices.productosservice;
 
 import java.io.IOException;
 import java.util.concurrent.Future;

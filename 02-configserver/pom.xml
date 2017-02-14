@@ -11,7 +11,7 @@
 
     <groupId>com.fruedacode.microservices</groupId>
     <artifactId>configserver</artifactId>
-    <version>1.0</version>
+    <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
     <name>02-DistributedConfigServer</name>
     <description>Crea un servicio de configuración distribuído basado en git</description>

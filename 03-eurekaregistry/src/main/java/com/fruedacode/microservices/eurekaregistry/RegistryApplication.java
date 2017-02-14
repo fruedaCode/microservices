@@ -1,4 +1,4 @@
-package com.fruedacode.microservices.zuulserver;
+package com.fruedacode.microservices.eurekaregistry;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

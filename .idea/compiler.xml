@@ -13,7 +13,9 @@
         <module name="parent" />
         <module name="productapi" />
         <module name="productoservice" />
+        <module name="productosservice" />
         <module name="stockservice" />
+        <module name="turbine" />
         <module name="zuulserver" />
       </profile>
     </annotationProcessing>
@@ -28,7 +30,9 @@
       <module name="parent" target="1.8" />
       <module name="productapi" target="1.8" />
       <module name="productoservice" target="1.8" />
+      <module name="productosservice" target="1.8" />
       <module name="stockservice" target="1.8" />
+      <module name="turbine" target="1.8" />
       <module name="zuulserver" target="1.8" />
     </bytecodeTargetLevel>
   </component>

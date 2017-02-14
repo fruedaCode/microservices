@@ -15,7 +15,7 @@
 	<packaging>jar</packaging>
 
 	<name>10-StockService</name>
-	<description>Peque�o microservicio que retorna el stock disponible para un determinado producto.</description>
+	<description>Pequeño microservicio que retorna el stock disponible para un determinado producto.</description>
 
     <dependencies>
         <dependency>

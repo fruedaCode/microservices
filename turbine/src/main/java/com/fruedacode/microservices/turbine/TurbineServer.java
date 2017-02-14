@@ -1,4 +1,4 @@
-package com.fruedacode.microservices.zuulserver;
+package com.fruedacode.microservices.turbine;
 
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

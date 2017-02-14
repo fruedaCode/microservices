@@ -1,4 +1,4 @@
-package com.fruedacode.microservices.fichaservice;
+package com.fruedacode.microservices.productosservice;
 
 import java.math.BigDecimal;
 import java.util.Objects;

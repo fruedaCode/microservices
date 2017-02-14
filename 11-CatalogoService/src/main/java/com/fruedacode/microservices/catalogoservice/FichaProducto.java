@@ -1,4 +1,4 @@
-package com.fruedacode.microservices.zuulserver;
+package com.fruedacode.microservices.catalogoservice;
 
 import java.math.BigDecimal;
 import java.util.Objects;

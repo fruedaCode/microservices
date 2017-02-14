@@ -1,4 +1,4 @@
-package com.fruedacode.microservices.fichaservice;
+package com.fruedacode.microservices.productosservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
