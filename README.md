@@ -13,6 +13,7 @@
 
 ### For windows
 SET JAVA_HOME=[route to java home e.g: C:/Program files/Java/jdk1.8.0_121]
+
 SET PATH=%PATH%;[path_to_maven]\bin
 
 ### For linux
@@ -25,23 +26,30 @@ export PATH=$PATH:[path_to_maven]\bin
 cd 02-configserver
 mvn spring-boot:run
 
+
 cd 03-eurekaregistry
 mvn spring-boot:run
+
 
 cd 04-zuulserver
 mvn spring-boot:run
 
+
 cd 10-stockservice
 mvn spring-boot:run
+
 
 cd 11-CatalogoService
 mvn spring-boot:run
 
+
 20-productosservice
 mvn spring-boot:run
 
+
 cd hystrixDashboard
 mvn spring-boot:run
+
 
 cd turbine
 mvn spring-boot:run
@@ -64,6 +72,7 @@ http://localhost:8989/turbine.stream
 
 ## References
 [Spring cloud Docs](http://cloud.spring.io/spring-cloud-static/spring-cloud.html)
+
 [Ciberado](https://github.com/ciberado/domina-springcloud.git)
 
 
